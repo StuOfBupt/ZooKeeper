@@ -1,6 +1,6 @@
 ## 1. 选举机制
 
-
+​		所有的candidate连接到 ZooKeeper 上然后创建一个节点用来选举，每个candidate会在该节点下创建一个顺序节点（eg.XXX0000001），从中选出一个节点作为 leader，其余节点作为 follower。当 leader 挂了之后所关联的顺序节点也会被 delete，然后再从剩余的节点中选出一个作为新的 leader
 
 ## 2.第三方包
 
